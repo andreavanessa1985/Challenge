@@ -7,7 +7,7 @@ describe('Test de API con Echo Server', () => {
 	    failOnStatusCode: false
 	}).then((response) => {
 	  try{
-        if (response.status !== 404) {
+        if (response.status !== 200) {
             cy.log(`Status code inesperado: ${response.status}`);
         }
         if (response.duration > 3000) {
